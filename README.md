@@ -7,13 +7,21 @@ How to :
 Create aws key-pair
 
 aws ec2 create-key-pair --key-name terraformwp --query 'KeyMaterial' --output text > ~/.ssh/terraformwp.pem
+
 chmod 400 ~/.ssh/terraformwp.pem
+
 mkdir somedir
+
 cd somedir
+
 git clone https://github.com/SergeyMuha/monit-terraform.git
+
 cd monit-terraform
+
 terraform init
+
 Deploy infrastructure. This command will output dns name for monithost
+
 
 terraform apply -input=false -auto-approve
 
